@@ -99,13 +99,20 @@
             @click="step === 4 ? submit() : $refs.stepper.next()"
             color="primary"
             type="submit"
-            :label="step === 4 ? 'Завершить регистрацию' : 'Продолжить'"
+            :label="step === 4 ? 'Завершить' : 'Продолжить'"
           />
           <q-btn
             v-if="step > 1"
             color="secondary"
             @click="$refs.stepper.previous()"
             label="Назад"
+            class="q-ml-sm"
+          />
+          <q-btn
+            v-if="step === 1"
+            color="secondary"
+            to="/login"
+            label="Войти"
             class="q-ml-sm"
           />
         </q-stepper-navigation>
