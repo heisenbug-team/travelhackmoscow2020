@@ -113,9 +113,6 @@
 <script>
 import verticalSeparator from '../../components/common/vertical-separator'
 import logo from '../../components/brand/logo'
-import backendRouter from '../../router/backend'
-
-import axios from 'axios'
 
 export default {
   data () {
@@ -159,14 +156,7 @@ export default {
   },
   methods: {
     async submit () {
-      axios.post(backendRouter.register(), {
-        mode: this.mode,
-        nickname: this.credentials.nickname,
-        name: this.credentials.name,
-        password: this.credentials.password,
-        languages: this.languages_selected,
-        interests: this.interests_selected
-      })
+      this.$store.dispatch('register', this.credentials)
         .then(async () => {
           await this.$router.push('/')
           window.location.reload()
@@ -175,7 +165,7 @@ export default {
           console.error(error.message)
 
           this.$q.notify({
-            message: 'Регистрация не удалась. :(',
+            message: '<div style="text-align: center; ">Регистрация не удалась. :(</p>',
             color: 'negative'
           })
         })
