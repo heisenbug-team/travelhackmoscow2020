@@ -8,14 +8,13 @@
           round
           @click="leftDrawerOpen = !leftDrawerOpen"
           icon="menu"
+          color="secondary"
           aria-label="Menu"
         />
 
         <q-toolbar-title>
-          Quasar App
+          Discover Moscow
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
