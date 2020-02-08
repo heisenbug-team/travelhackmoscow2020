@@ -115,8 +115,8 @@
 </template>
 
 <script>
-import verticalSeparator from '../../components/common/vertical-separator'
-import logo from '../../components/brand/logo'
+import verticalSeparator from '../../../components/common/vertical-separator'
+import logo from '../../../components/brand/logo'
 
 export default {
   data () {
