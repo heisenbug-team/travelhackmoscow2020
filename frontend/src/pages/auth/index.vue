@@ -1,7 +1,9 @@
 <template>
   <div class="auth-card justify-center flex-center">
+    <vertical-separator />
+
     <div style="text-align: center">
-      <logo />
+      <logo style="height: 5em" />
     </div>
 
     <vertical-separator />
@@ -9,7 +11,9 @@
     <q-stepper v-model="step" ref="stepper" color="primary" animated contracted>
       <q-step :name="1" icon="person" title="Приветствие">
         <q-card-section align="center">
-          Добро пожаловать
+          <p><strong>Ищите людей вокруг себя!</strong></p>
+
+          <p>Выберете, Вы путешествуете и хотите пообщаться с местными жителями, или Вы ищете туристов и хотите с ними пообщаться?</p>
 
           <q-btn-toggle
             v-model="mode"
