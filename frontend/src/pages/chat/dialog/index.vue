@@ -4,7 +4,8 @@
       <q-chat-message
         v-for="message in this.dialog"
         :key="message.id"
-        color="primary"
+        :bg-color="message.me ? 'primary' : 'secondary'"
+        text-color="white"
         :name="getName(message.me)"
         :avatar="getAvatar(message.me)"
         :text="getText(message.text)"
