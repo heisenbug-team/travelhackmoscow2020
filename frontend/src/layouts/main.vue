@@ -45,7 +45,11 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple v-if="getCurrentUsername" to='/chat'>
+          <vertical-separator />
+          <q-separator />
+          <vertical-separator />
+
+          <q-item clickable v-ripple v-if="!getCurrentUsername" to='/chat'>
             <q-item-section avatar>
               <q-icon name="chat" />
             </q-item-section>
@@ -55,9 +59,19 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple v-if="getCurrentUsername" to='/chat'>
+          <q-item clickable v-ripple v-if="!getCurrentUsername" to='/select'>
             <q-item-section avatar>
-              <q-icon name="profile" />
+              <q-icon name="view_carousel" />
+            </q-item-section>
+
+            <q-item-section>
+              Найти людей
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple v-if="!getCurrentUsername" to='/profile'>
+            <q-item-section avatar>
+              <q-icon name="account_circle" />
             </q-item-section>
 
             <q-item-section>
@@ -85,6 +99,8 @@
 </template>
 
 <script>
+import verticalSeparator from '../components/common/vertical-separator'
+
 export default {
   name: 'mainLayout',
 
@@ -101,6 +117,10 @@ export default {
     getCurrentName () {
       return localStorage.getItem('name')
     }
+  },
+
+  components: {
+    verticalSeparator
   }
 }
 </script>
