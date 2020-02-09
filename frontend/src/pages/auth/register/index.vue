@@ -8,7 +8,7 @@
 
     <vertical-separator />
 
-    <q-stepper v-model="step" ref="stepper" color="primary" animated contracted>
+    <q-stepper v-model="step" ref="stepper" color="primary" animated contracted swipeable>
       <q-step :name="1" icon="person" title="Приветствие">
         <q-card-section align="center">
           <p><strong>Ищите людей вокруг себя!</strong></p>
@@ -137,8 +137,8 @@ export default {
       step: 1,
       mode: 'tourist',
       mode_options: [
-        { label: 'Турист', value: 'tourist' },
-        { label: 'Житель Москвы', value: 'local' }
+        { label: 'Я турист', value: 'tourist' },
+        { label: 'Я житель Москвы', value: 'local' }
       ],
       languages_selected: [],
       languages_options: [
@@ -149,19 +149,16 @@ export default {
       interests_selected: [],
       interests_options: [
         { label: 'Информационные технологии', value: 'it' },
-        { label: 'Спорт', value: 'english' },
-        { label: 'Музыка', value: 'chinese' },
-        { label: 'Охота и рыбалка', value: 'chinese' },
-        { label: 'Литература', value: 'chinese' },
-        { label: 'Философия', value: 'chinese' },
-        { label: 'Саморазвитие', value: 'chinese' },
-        { label: 'Искусство', value: 'chinese' },
-        { label: 'Архитектура', value: 'chinese' },
-        { label: 'Благотворительность', value: 'chinese' },
-        { label: 'Автомобили', value: 'chinese' },
-        { label: 'Автомобили', value: 'chinese' },
-        { label: 'Автомобили', value: 'chinese' },
-        { label: 'Автомобили', value: 'chinese' }
+        { label: 'Спорт', value: 'sport' },
+        { label: 'Музыка', value: 'music' },
+        { label: 'Охота и рыбалка', value: 'hunting' },
+        { label: 'Литература', value: 'literature' },
+        { label: 'Философия', value: 'philosophy' },
+        { label: 'Саморазвитие', value: 'self-dev' },
+        { label: 'Искусство', value: 'art' },
+        { label: 'Архитектура', value: 'architecture' },
+        { label: 'Благотворительность', value: 'donations' },
+        { label: 'Автомобили', value: 'cars' }
       ]
     }
   },
