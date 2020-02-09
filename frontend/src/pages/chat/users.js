@@ -3,19 +3,81 @@ export default [
     id: 1,
     name: 'Алексей Кузнецов',
     last_message: 'Ну что, сдал матеш?)))',
-    letter: 'А'
+    letter: 'А',
+    avatar: 'https://i7.pngguru.com/preview/178/419/741/computer-icons-avatar-login-user-avatar.jpg',
+    dialog: [
+      {
+        id: 1,
+        text: 'Ха-ха, я не сдал матешу)))',
+        me: false,
+        time: 5
+      },
+      {
+        id: 2,
+        text: 'Бывает, лол',
+        me: true,
+        time: 3
+      },
+      {
+        id: 3,
+        text: 'Ну что, сдал матеш?)))',
+        me: true,
+        time: 2
+      }
+    ]
   },
   {
     id: 2,
     name: 'Mallorie Alessandrini',
     last_message: 'Отлично, до встречи!)',
-    letter: 'M'
+    letter: 'M',
+    avatar: 'https://i7.pngguru.com/preview/178/419/741/computer-icons-avatar-login-user-avatar.jpg',
+    dialog: [
+      {
+        id: 1,
+        text: 'Привет, как дела. Давай встретимся',
+        me: false,
+        time: 5
+      },
+      {
+        id: 2,
+        text: 'Да, давай!',
+        me: true,
+        time: 3
+      },
+      {
+        id: 3,
+        text: 'Отлично, до встречи!)',
+        me: false,
+        time: 2
+      }
+    ]
   },
   {
     id: 3,
     name: 'Luke Smith',
     last_message: 'See ya!',
-    letter: 'L'
+    letter: 'L',
+    dialog: [
+      {
+        id: 1,
+        text: 'Hello! What\'s up!',
+        me: false,
+        time: 5
+      },
+      {
+        id: 2,
+        text: 'Yeah, I\'m fine! See you tommorow!',
+        me: true,
+        time: 3
+      },
+      {
+        id: 3,
+        text: 'See ya!',
+        me: false,
+        time: 2
+      }
+    ]
   },
   {
     id: 4,

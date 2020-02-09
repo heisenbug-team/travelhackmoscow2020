@@ -3,9 +3,10 @@ const routes = [
     path: '/',
     component: () => import('layouts/main.vue'),
     children: [
-      { path: 'register', component: () => import('pages/auth/register/index.vue') },
-      { path: 'login', component: () => import('pages/auth/login/index.vue') },
-      { path: 'chat', component: () => import('pages/chat/index.vue') }
+      { path: '/register', component: () => import('pages/auth/register/index.vue') },
+      { path: '/login', component: () => import('pages/auth/login/index.vue') },
+      { path: '/chat', component: () => import('pages/chat/index.vue') },
+      { path: '/chat/:id', component: () => import('pages/chat/dialog/index.vue') }
     ]
   }
 ]

@@ -2,9 +2,17 @@
   <div>
     <q-list bordered>
       <q-separator />
+
       <q-item-label header>Контакты</q-item-label>
 
-      <q-item v-for="contact in contacts" :key="contact.id" class="q-my-sm" clickable v-ripple>
+      <q-item
+        v-for="contact in contacts"
+        :key="contact.id"
+        class="q-my-sm"
+        clickable
+        v-ripple
+        @click="routeToChat(contact.id)"
+      >
         <q-item-section avatar>
           <q-avatar color="primary" text-color="white">
             {{ contact.letter }}
@@ -28,10 +36,11 @@ export default {
     return {
       contacts
     }
+  },
+  methods: {
+    routeToChat (id) {
+      this.$router.push(`/chat/${id}`)
+    }
   }
 }
 </script>
-
-<style>
-
-</style>
